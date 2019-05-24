@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu de Professores</title>
+</head>
+
+<center>
+<h1>Bem Vindo</h1>
+<body background="https://images5.alphacoders.com/567/567661.jpg">
+
+    <table border="10" bgcolor="blakc">
+        {% for item in professores %}
+        <tr>
+            <td><a href="/detalhar/{{item[0]}}">{{item[0]}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</center>
+
+<center>
+<h2>Consulta de Titulaçao</h2>
+
+
+    <form action="/consulta" method="post">
+    Consulta : <input type="text" name="parametro"><br>
+    <input type="submit" value="Realizar Consula"><br>
+</form>
+
+</center>
+
+<center>
+<h3>Consulta de Ciencias de Computaçao</h3>
+
+    <form action="/consultacic" method="get">
+    <input type="submit" value="Realizar Consula"><br>
+
+</center>
+</body>
+</html>
